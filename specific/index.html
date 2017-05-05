@@ -1,12 +1,12 @@
 ---
 layout: default
-title: W-I-N for What-I-Need
+title: For specific purpose
 ---
 	<h1>{{ page.title }}</h1>
 	<ul class="posts">
 
 	  {% for post in site.posts %}
-			{% if post.section == "win" %}
+			{% if post.section == "specific" %}
 				<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
 			{% endif %}
 	  {% endfor %}
