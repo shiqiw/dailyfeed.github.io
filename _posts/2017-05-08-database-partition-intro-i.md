@@ -22,7 +22,7 @@ Horizontal partitioning divides a table into multiple tables that contain the sa
 Sharding strategies include lookup strategy (build mapping between the shard key and the physical/virtual storage), range strategy (group and order by shard key), and hash strategy (reduce the chance of hotspots).
 
 ## What is functional partition
-I haven't seen functional partition concept else where. The following description is from *Cloud Design Pattern*.
+I haven't seen functional partition concept else where other then Microsoft docs and *Cloud Design Pattern*.
 
 For systems where it is possible to identify a bounded context for each distinct business area or service in the application, functional partitioning provides a technique for improving isolation and data access performance. Another common use of functional partitioning is to separate read-write data from read-only data that's used for reporting purposes.
 
