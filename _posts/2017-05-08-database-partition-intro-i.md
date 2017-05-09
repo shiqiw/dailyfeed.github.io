@@ -21,7 +21,9 @@ Horizontal partitioning divides a table into multiple tables that contain the sa
 
 Sharding strategies include lookup strategy (build mapping between the shard key and the physical/virtual storage), range strategy (group and order by shard key), and hash strategy (reduce the chance of hotspots).
 
-## Functional partition
+## What is functional partition
+I haven't seen functional partition concept else where. The following description is from *Cloud Design Pattern*.
+
 For systems where it is possible to identify a bounded context for each distinct business area or service in the application, functional partitioning provides a technique for improving isolation and data access performance. Another common use of functional partitioning is to separate read-write data from read-only data that's used for reporting purposes.
 
 ## Use cases
@@ -31,9 +33,6 @@ Use sharding when a data store is likely to need to scale beyond the limits of t
 
 ## References
 1. [Database table partitioning in SQL Server](https://www.sqlshack.com/database-table-partitioning-sql-server/)
-
 2. [Partition (database)](https://en.wikipedia.org/wiki/Partition_(database))
-
 3. [Horizonal VS vertical](http://stackoverflow.com/questions/20388923/database-partitioning-horizontal-vs-vertical-difference-between-normalizatio)
-
 4. [Data partition](https://docs.microsoft.com/en-us/azure/architecture/best-practices/data-partitioning)
