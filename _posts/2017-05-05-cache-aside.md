@@ -2,8 +2,8 @@
 layout: post
 title: "Cache aside"
 date: 2017-05-05
-permalink: /specific/:year/:month/:day/:title
-section: "specific"
+permalink: /knowledge/:year/:month/:day/:title
+section: "knowledge"
 ---
 
 Since we talked about different types of cache yesterday, it seems reasonable to know a little more about their usage patterns, thus cache aside pattern is today's topic.

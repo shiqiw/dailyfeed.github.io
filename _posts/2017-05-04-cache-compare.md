@@ -2,8 +2,8 @@
 layout: post
 title: "In process cache VS distributed cache"
 date: 2017-05-04
-permalink: /specific/:year/:month/:day/:title
-section: "specific"
+permalink: /knowledge/:year/:month/:day/:title
+section: "knowledge"
 ---
 
 Microsoft announced that on Nov 30, 2016, the In-Role Cache Service will no longer be supported. In role cache seems to be an Azure-specific term, elsewhere it is call in process cache. 

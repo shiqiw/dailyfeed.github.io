@@ -1,12 +1,13 @@
 ---
 layout: default
-title: What-I-Need
+title: Technique Feed
 ---
+
 	<h1>{{ page.title }}</h1>
 	<ul class="posts">
 
 	  {% for post in site.posts %}
-			{% if post.section == "win" %}
+			{% if post.section == "technique" %}
 				<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
 			{% endif %}
 	  {% endfor %}

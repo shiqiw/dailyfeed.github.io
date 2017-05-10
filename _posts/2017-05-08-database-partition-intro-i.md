@@ -2,8 +2,8 @@
 layout: post
 title: "Data base partition introduction I"
 date: 2017-05-08
-permalink: /specific/:year/:month/:day/:title
-section: "specific"
+permalink: /knowledge/:year/:month/:day/:title
+section: "knowledge"
 ---
 
 ## Why partition
