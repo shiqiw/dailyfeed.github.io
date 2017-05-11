@@ -30,26 +30,26 @@ title: Knowledge Feed
 	<!-- Previous, next and list of pagination links -->
 	{% if paginator.total_pages > 1 %}
 	<div class="pagination">
-	{% if paginator.previous_page %}
-	<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-	{% else %}
-	<span>&laquo; Prev</span>
-	{% endif %}
-
-	{% for page in (1..paginator.total_pages) %}
-		{% if page == paginator.page %}
-		<em>{{ page }}</em>
-		{% elsif page == 1 %}
-		<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+		{% if paginator.previous_page %}
+		<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><img src="{{ site.url }}/assets/arrow-left-512.png" title="left" alt="&laquo;"> Prev</a>
 		{% else %}
-		<a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+		<span><img src="{{ site.url }}/assets/arrow-left-512.png" title="left" alt="&laquo"> Prev</span>
 		{% endif %}
-	{% endfor %}
 
-	{% if paginator.next_page %}
-		<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-	{% else %}
-		<span>Next &raquo;</span>
-	{% endif %}
+		{% for page in (1..paginator.total_pages) %}
+			{% if page == paginator.page %}
+			<em>{{ page }}</em>
+			{% elsif page == 1 %}
+			<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+			{% else %}
+			<a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+			{% endif %}
+		{% endfor %}
+
+		{% if paginator.next_page %}
+		<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next <img src="{{ site.url }}/assets/arrow-right-512.png" title="right" alt="&raquo;"></a>
+		{% else %}
+		<span>Next <img src="{{ site.url }}/assets/arrow-right-512.png" title="right" alt="&raquo;"></span>
+		{% endif %}
 	</div>
 	{% endif %}

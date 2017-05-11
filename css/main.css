@@ -32,6 +32,9 @@ p {
     line-height: 1.4em;
     color: #333;
 }
+img {
+    height: 12px;
+}
 ul li {
     font-size: 1.2em;
     line-height: 1.4em;
@@ -46,8 +49,13 @@ ul.posts {
     margin: 20px auto 40px; 
     font-size: 1.5em;
 }
-
 ul.posts li {
     list-style: none;
+}
+
+.pagination {
+    margin-bottom: 10px;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-weight: bold;
 }
 
