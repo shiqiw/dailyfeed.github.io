@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Google analytics"
-date: 2017-05-08
+date: 2017-05-09
 permalink: /technique/:year/:month/:day/:title
 section: "technique"
 ---
