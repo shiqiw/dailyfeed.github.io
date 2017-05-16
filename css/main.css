@@ -59,3 +59,7 @@ ul.posts li {
     font-weight: bold;
 }
 
+.post-image {
+    height: 150px;
+    widows: 150px;
+}
