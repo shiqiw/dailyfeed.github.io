@@ -36,17 +36,17 @@ Range partition has the disadvantage of requiring a table that maps ranges to in
 
 Although partitioning in Redis is conceptually the same whether using Redis as a data store or as a cache, there is a significant limitation when using it as a data store. When Redis is used as a data store, a given key must always map to the same Redis instance. When Redis is used as a cache, if a given node is unavailable it is not a big problem if a different node is used, altering the key-instance map as we wish to improve the availability of the system.
 
-If Redis is used as a cache scaling up and down using consistent hashing is easy.
+If Redis is used as a cache scaling up and down using consistent hashing is easy and predictable.
 
 If Redis is used as a store, a fixed keys-to-nodes map is used, so the number of nodes must be fixed and cannot vary.
-
-## Usage: load balancing
 
 ## References
 1. [Consistent hashing](https://en.wikipedia.org/wiki/Consistent_hashing)
 2. [Consistent hashing](http://www.tom-e-white.com/2007/11/consistent-hashing.html)
 3. [Consistent Hashing in Cassandra](https://blog.imaginea.com/consistent-hashing-in-cassandra/)
 4. [Partitioning: how to split data among multiple Redis instances.](https://redis.io/topics/partitioning)
+5. [Improving load balancing with a new consistent-hashing algorithm](https://medium.com/vimeo-engineering-blog/improving-load-balancing-with-a-new-consistent-hashing-algorithm-9f1bd75709ed)
+6. [The Simple Magic of Consistent Hashing](http://www.paperplanes.de/2011/12/9/the-magic-of-consistent-hashing.html)
 
 ## Appendix
 
