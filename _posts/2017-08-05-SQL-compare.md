@@ -54,3 +54,5 @@ Not use PostgreSQL when: If all you require is fast read operations, PostgreSQL 
 1. [SQLite vs MySQL vs PostgreSQL: A Comparison Of Relational Database Management Systems](https://www.digitalocean.com/community/tutorials/sqlite-vs-mysql-vs-postgresql-a-comparison-of-relational-database-management-systems)
 
 2. [Understanding SQL And NoSQL Databases And Different Database Models](https://www.digitalocean.com/community/tutorials/understanding-sql-and-nosql-databases-and-different-database-models)
+
+3. [MySQL vs Oracle](https://itxdesign.com/mysql-vs-oracle/)
