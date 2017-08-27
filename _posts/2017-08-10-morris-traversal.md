@@ -11,6 +11,8 @@ It solves the problem of traverse binary tree with O(1) space and without affect
 
 最大的难点在于，遍历到子节点的时候怎样重新返回到父节点（假设节点中没有指向父节点的p指针）==> 利用叶子节点中的左右空指针指向某种顺序遍历下的前驱节点或后继节点。
 
+直觉上，认为它的复杂度是O(nlgn)，因为找单个节点的前驱节点与树的高度有关。但事实上，寻找所有节点的前驱节点只需要O(n)时间。n个节点的二叉树中一共有n-1条边，整个过程中每条边最多只走2次，一次是为了定位到某个节点，另一次是为了寻找上面某个节点的前驱节点，所以复杂度为O(n)。
+
 ### In order traversal
 1. 如果当前节点的左孩子为空，则输出当前节点并将其右孩子作为当前节点。
 
@@ -32,7 +34,7 @@ It solves the problem of traverse binary tree with O(1) space and without affect
                     result.add(curr.val);
                     curr = curr.right;
                 } else {
-                    TreeNode prev = findRightMost(curr.left);
+                    TreeNode prev = findRightMost(curr, curr.left);
                     if(prev.right == curr) {
                         prev.right == null;
                         result.add(curr.val);
@@ -46,11 +48,11 @@ It solves the problem of traverse binary tree with O(1) space and without affect
             return result;
         }
 
-        private TreeNode findRightMost(TreeNode root) {
-            while(root.right != null) {
-                root = root.right;
+        private TreeNode findRightMost(TreeNode root, TreeNode prev) {
+            while(prev.right != null && prev.right != root) {
+                prev = prev.right;
             }
-            return root;
+            return prev;
         }
     }
 ```
@@ -139,7 +141,7 @@ It solves the problem of traverse binary tree with O(1) space and without affect
                     result.add(curr.val);
                     curr = curr.right;
                 } else {
-                    TreeNode prev = findRightMost(curr.left);
+                    TreeNode prev = findRightMost(curr, curr.left);
                     if(prev.right == curr) {
                         prev.right == null;
                         curr = curr.right;
@@ -153,11 +155,11 @@ It solves the problem of traverse binary tree with O(1) space and without affect
             return result;
         }
 
-        private TreeNode findRightMost(TreeNode root) {
-            while(root.right != null) {
-                root = root.right;
+        private TreeNode findRightMost(TreeNode root, TreeNode curr) {
+            while(curr.right != null && curr.right != root) {
+                curr = curr.right;
             }
-            return root;
+            return curr;
         }
     }
 
