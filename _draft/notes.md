@@ -59,3 +59,16 @@ fire receive evetually
 
 ### About Python Makefile
 [Makefiles in python projects](https://krzysztofzuraw.com/blog/2016/makefiles-in-python-projects.html)
+
+### Create a python app in Azure
+https://docs.microsoft.com/en-us/azure/app-service-web/app-service-web-get-started-python
+
+### LMAX
+High-perf inter-thread messaging library
+
+### Java tree map
+Guaranteed O(log n) runtime based on red-black tree.
+
+Key ordered in natural order by default.
+
+Used for ceiling and floor (key) range.
