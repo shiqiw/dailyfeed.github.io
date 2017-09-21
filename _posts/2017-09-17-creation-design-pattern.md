@@ -22,9 +22,37 @@ A design pattern that allows for the creation of objects without specifying the 
 ![Figure 3]({{ site.url }}/assets/factory.jpg){:class="post-image"}
 
 ### Prototype
-a design pattern that is used to instantiate a class by copying, or cloning, the properties of an existing object. The new object is an exact copy of the prototype but permits modification without altering the original.
+A design pattern that is used to instantiate a class by copying, or cloning, the properties of an existing object. The new object is an exact copy of the prototype but permits modification without altering the original.
 
 ![Figure 4]({{ site.url }}/assets/prototype.jpg){:class="post-image"}
+
+### Singleton
+A design pattern that is used to ensure that a class can only have one concurrent instance. Whenever additional objects of a singleton class are required, the previously created, single instance is provided.
+
+```java
+    public sealed class Singleton
+    {
+        private static volatile Singleton _instance;
+        private static readonly object _lockThis = new object();
+
+        private Singleton() { }
+
+        public static Singleton GetSingleton()
+        {
+            if (_instance == null)
+            {
+                lock (_lockThis)
+                {
+                    if (_instance == null) _instance = new Singleton();
+                }
+            }
+            return _instance;
+        }
+    }
+```
+
+![Figure 5]({{ site.url }}/assets/singleton.jpg){:class="post-image"}
+
 
 Reference
 1. [Creational Design Patterns](https://www.codeproject.com/Articles/430590/Design-Patterns-of-Creational-Design-Patterns)
