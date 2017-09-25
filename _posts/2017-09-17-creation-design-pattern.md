@@ -53,6 +53,5 @@ A design pattern that is used to ensure that a class can only have one concurren
 
 ![Figure 5]({{ site.url }}/assets/singleton.jpg){:class="post-image"}
 
-
-Reference
+### Reference
 1. [Creational Design Patterns](https://www.codeproject.com/Articles/430590/Design-Patterns-of-Creational-Design-Patterns)
