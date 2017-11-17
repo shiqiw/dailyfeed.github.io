@@ -22,3 +22,16 @@ section: "knowledge"
 - 代理：代理是无状态的，状态由消费者维护，因此消费者可以多次消费数据。
 
 - ZooKeeper：在任意时间点确定哪些服务器活着且在工作中。本质是分布式分层级的文件系统。每个代理通过ZooKeeper协调其他代理。
+
+### Rainbow table
+Used to crack password hashes, exp plaintext password up to a certain length consisting of linited set of characters. Brute force attack. Trade off time and space.
+
+Hashing and reduction function (any function that return 'plain text' value at given length). Repeat H and R process, if it falls into a chain endpoint, we have the start point and recreate the chain. If it contains value we have, then the immediate predecessor is the password we are looking for.
+
+Simple hash chain may collide. Reduction function is hard to choose. Rainbow table replace simple R with a set of R[k]. Remove duplicate chain that have same final value. These chains may overlap briefly, but will not merge.
+
+```
+Still need to understand why it takes k times more space with k times less time
+```
+
+But with large saltes, rainbow table will not work well. Other efforts include key strengthening, key stretching...
