@@ -6,6 +6,9 @@ permalink: /knowledge/:year/:month/:day/:title
 section: "knowledge"
 ---
 
+### About
+A brief summary of what I read about recently.
+
 ### Browser based indexing
 历史记录索引。
 
