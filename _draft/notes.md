@@ -72,3 +72,11 @@ Guaranteed O(log n) runtime based on red-black tree.
 Key ordered in natural order by default.
 
 Used for ceiling and floor (key) range.
+
+### Design Google canlendar
+
+Kafka/ Event hub/ Message queue
+
+Apache Spark
+
+Samza
