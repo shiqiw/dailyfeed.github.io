@@ -32,7 +32,7 @@
 
 ### Publish subscribe
 
-### Point to point
+### Point to point / peer to peer
 
 ### Store-forward
 > Sender => mediator (storage, e.g when not proper processor, store and forward) => receiver
@@ -80,3 +80,7 @@ Kafka/ Event hub/ Message queue
 Apache Spark
 
 Samza
+
+https://baike.baidu.com/item/%E6%AD%A3%E4%BA%A4%E8%AF%95%E9%AA%8C%E8%AE%BE%E8%AE%A1
+
+https://baike.baidu.com/item/%E4%BC%98%E9%80%89%E6%B3%95
